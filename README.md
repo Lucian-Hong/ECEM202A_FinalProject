@@ -1,4 +1,5 @@
-# ECE M202A Final Project - Unitree Go 2 Autonomous Exploration and Object Retrieval System
+# ECE M202A Final Project
+# Unitree Go 2 Autonomous Exploration and Object Retrieval System
 This is repository template for UCLA ECEM202A / CSM213A projects.
 
 Use the folders as follows:
