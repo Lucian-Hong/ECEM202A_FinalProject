@@ -58,7 +58,7 @@ The primary goal of this project is to develop an integrated system that:
 - **Expected Outcome**: Validation of the system’s effectiveness and identification of areas for further optimization.
 
 ## Required Submissions 
-[Project Proposal]() <br>
+[Project Proposal](https://github.com/Lucian-Hong/ECEM202A_FinalProject/blob/main/docs/proposal.md) <br>
 [Midterm Checkpoint Slides]() <br>
 [Final Report]() <br>
 [Final Slides]() 
