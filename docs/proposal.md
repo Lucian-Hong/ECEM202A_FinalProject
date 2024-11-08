@@ -76,17 +76,21 @@ The following metrics will be used to assess the project's success:
 ## 9. Related Work
 
 ### 9.a. Papers
-
 List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
 
 ### 9.b. Datasets
-
-List datasets that you have identified and plan to use. Provide references (with full citation in the References section below).
+- **COCO Dataset**: Utilized for training object recognition models. [COCO](https://cocodataset.org/)
+- **Open Speech Datasets**: Used for voice command training. [Open Speech](https://openslr.org/)
 
 ### 9.c. Software
+- **YOLO**: Real-time object detection. [YOLO](https://pjreddie.com/darknet/yolo/)
+- **Whisper by OpenAI**: Voice recognition. [Whisper](https://github.com/openai/whisper)
+- **pyttsx3**: Text-to-speech library for Python. [pyttsx3](https://pyttsx3.readthedocs.io/en/latest/)
 
-List softwate that you have identified and plan to use. Provide references (with full citation in the References section below).
-
-## 10. References
-
-List references correspondign to citations in your text above. For papers please include full citation and URL. For datasets and software include name and URL.
+## References
+- Unitree Go2 ROS2 SDK Project: https://github.com/abizovnuralem/go2_ros2_sdk
+- COCO Dataset: https://cocodataset.org/
+- Open Speech Datasets: https://openslr.org/
+- YOLO: https://pjreddie.com/darknet/yolo/
+- Whisper: https://github.com/openai/whisper
+- pyttsx3: https://pyttsx3.readthedocs.io/en/latest/
