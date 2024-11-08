@@ -2,35 +2,76 @@
 
 ## 1. Motivation & Objective
 
-What are you trying to do and why? (plain English without jargon)
+The goal of Human-Robot Collaboration for Search and Retrieval is to develop an advanced robotic system that enhances search and retrieval tasks in complex or hazardous environments. Current manual methods are time-consuming and pose safety risks to human operators. By integrating machine learning, autonomous navigation, and voice-controlled interactions, we aim to develop a system that improves efficiency, safety, and user experience.
 
 ## 2. State of the Art & Its Limitations
 
-How is it done today, and what are the limits of current practice?
+Currently, search and retrieval operations rely on human efforts or partially automated systems. Existing robotic solutions either focus solely on autonomous navigation without human interaction or require constant manual control, limiting their effectiveness in unpredictable environments, and the lack of human-machine collaboration makes them less adaptable and more resource intensive.
 
 ## 3. Novelty & Rationale
 
-What is new in your approach and why do you think it will be successful?
+Our project integrates real-time object recognition (using YOLO), voice command processing (using Whisper), and voice feedback (using pyttsx3) on a portable Raspberry Pi 5 AI Kit with battery attached to the Unitree Go 2 robot dog. This combination of technologies supports autonomous operation and human interaction, making the system adaptable to various scenarios. 
 
 ## 4. Potential Impact
 
-If the project is successful, what difference will it make, both technically and broadly?
+If successful, the project can improve how search and retrieval tasks are performed in challenging environments, and technically advance the use of machine learning and human-robot collaboration. Broadly, it can improve safety for operators, reduce workload, and increase the speed and accuracy of search operations in industrial, emergency, and hazardous settings.
 
 ## 5. Challenges
 
-What are the challenges and risks?
+Key challenges include maintaining real-time object recognition performance on Raspberry Pi 5, integrating the components within ROS 2 framework, and ensuring reliable voice recognition in different environments. Risk factors include hardware limitations, potential latency issues, and accurate communication between the robot and human operator.
 
 ## 6. Requirements for Success
 
-What skills and resources are necessary to perform the project?
+To ensure the success of this project, the following skills and resources are essential:
+
+### Technical Skills
+- **Programming Language**: Proficiency in Python for development.
+- **Robotics Framework**: Familiarity with ROS 2 for integrating various system components.
+- **Machine Learning**: Experience with training and deploying YOLO for object recognition and Whisper for voice recognition.
+
+### Hardware Resources
+- **Unitree Go 2 Robot Dog**: The main platform for autonomous navigation and interaction.
+- **Raspberry Pi 5**: Used for running software components within ROS 2 framework, processing object recognition, and handling voice commands.
+
+### Software Libraries
+- **YOLO**: Real-time object detection.
+- **Whisper**: Voice recognition and command processing.
+- **pyttsx3**: Text-to-speech library for generating audio feedback.
 
 ## 7. Metrics of Success
 
-What are metrics by which you would check for success?
+The following metrics will be used to assess the project's success:
+
+- **Object Recognition Accuracy**: Measured by the percentage of correctly identified objects during exploration.
+- **Voice Command Reliability**: The successful execution rate of voice commands in various environments.
+- **Operator Feedback**: User satisfaction scores collected from trials.
+- **Task Completion Time**: The time taken to identify and retrieve objects compared to existing manual methods.
 
 ## 8. Execution Plan
 
-Describe the key tasks in executing your project, and in case of team project describe how will you partition the tasks.
+## Execution Plan
+### Key Tasks
+1. **System Setup**:
+   - Integrate the Raspberry Pi 5 with ROS 2 to control the Unitree Go 2 robot dog.
+   - Configure and test hardware connections.
+
+2. **Software Development**:
+   - Implement ROS 2 architecture for the integration of navigation, object recognition, and voice interaction.
+   - Develop the machine learning-based object recognition module using YOLO.
+   - Build the voice command interface using Whisper for recognition and pyttsx3 for feedback.
+
+3. **Testing and Iteration**:
+   - Conduct extensive tests in controlled environments to ensure reliability.
+   - Optimize software for real-time performance on the Raspberry Pi 5.
+
+4. **Performance Evaluation**:
+   - Collect data based on success metrics such as accuracy, response times, and user feedback.
+   - Refine the system based on test results and operator input.
+
+### Task Partition (for team projects)
+- **Johnson Liu**:
+- **Yi Han**:
+- **Pinhao Hong**:
 
 ## 9. Related Work
 
