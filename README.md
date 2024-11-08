@@ -12,10 +12,10 @@ Welcome to the **Human-Robot Collaboration for Search and Retrieval** project! T
 
 
 ## Team Information
-Course: Fall 2024 ECE202A Embedded Systems @ UCLA
-Instructor: Professor Mani Srivastava
-Mentor: Julian de Gortari
-Team Members: Johnson Liu, Yi Han, Pinhao Hong
+- Course: Fall 2024 ECE202A Embedded Systems @ UCLA
+- Instructor: Professor Mani Srivastava
+- Mentor: Julian de Gortari
+- Team Members: Johnson Liu, Yi Han, Pinhao Hong
 
 ## Devices
 The core devices used in this project include:
