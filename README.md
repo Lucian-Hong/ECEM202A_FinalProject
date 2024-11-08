@@ -1,7 +1,7 @@
-# Unitree Go 2 Autonomous Exploration and Object Retrieval System
+# Human-Robot Collaboration for Search and Retrieval
 
 ## Overview
-Welcome to the **Unitree Go 2 Autonomous Exploration and Object Retrieval System** project! This project enhances efficiency and safety during search and retrieval operations in complex or hazardous environments. By combining autonomous navigation, machine learning for object recognition, and human-robot collaboration through voice commands, we aim to reduce manual workload and improve safety.
+Welcome to the **Human-Robot Collaboration for Search and Retrieval** project! This project enhances efficiency and safety during search and retrieval operations in complex or hazardous environments. By combining autonomous navigation, machine learning for object recognition, and human-robot collaboration through voice commands, we aim to reduce manual workload and improve safety.
 
 ## Table of Contents
 - [Team Information](#team-information)
