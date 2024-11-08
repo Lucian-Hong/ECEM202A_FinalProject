@@ -68,7 +68,7 @@ The following metrics will be used to assess the project's success:
    - Collect data based on success metrics such as accuracy, response times, and user feedback.
    - Refine the system based on test results and operator input.
 
-### Task Partition (for team projects)
+### Task Partition
 - **Johnson Liu**:
 - **Yi Han**:
 - **Pinhao Hong**:
