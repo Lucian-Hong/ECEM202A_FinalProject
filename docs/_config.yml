@@ -2,5 +2,6 @@ theme: jekyll-theme-modernist
 show_downloads: true
 
 # Name of website
-title: "Human-Robot Collaboration <br> for Search and Retrieval"
+title: Human-Robot Collaboration
+title: for Search and Retrieval
 description: Project for UCLA ECEM202A/CSM213A (Fall 2024)
