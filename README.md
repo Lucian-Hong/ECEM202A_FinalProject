@@ -54,7 +54,7 @@ The primary goal of this project is to develop an integrated system that:
 - **Expected Outcome**: Improved operator support and situational awareness, minimizing risks in hazardous areas.
 
 ### Aim 4: Real-World Validation
-- **Objective**: Test the system in real-world use cases, such as emergency evacuation and industrial tool retrieval, to assess performance.
+- **Objective**: Test the system in real-world use cases to assess performance.
 - **Expected Outcome**: Validation of the system’s effectiveness and identification of areas for further optimization.
 
 ## Required Submissions 
