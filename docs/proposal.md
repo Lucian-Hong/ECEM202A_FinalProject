@@ -67,9 +67,9 @@ The following metrics will be used to assess the project's success:
 4. **Performance Evaluation**:
    - Collect data based on success metrics such as accuracy, response times, and user feedback.
    - Refine the system based on test results and operator input.
-
+ß
 ### Task Partition
-- **Johnson Liu**:
+- **Johnson Liu**: Working on implementing object detection and tracking using pre-trained YOLO model on Raspberry Pi 5. Will also work on mapping and trajectory planning for the Unitree Go2 robotic dog.
 - **Yi Han**:
 - **Pinhao Hong**: Working with Johnson to Setup the Rasberry Pi and object recognition. In charge of writeup and website editing.
 
