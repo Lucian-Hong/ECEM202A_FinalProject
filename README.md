@@ -20,9 +20,7 @@ Welcome to the **Human-Robot Collaboration for Search and Retrieval** project! T
 ## Devices
 The core devices used in this project include:
 - **Unitree Go 2 Robot Dog**: The main platform for autonomous navigation and object interaction.
-- **Raspberry Pi 5**: Functions as the control unit for running machine learning models and handling commands. Equipped with:
-  - **External Microphone**: For capturing voice commands.
-  - **External Speaker**: For providing audio feedback to the operator.
+- **Raspberry Pi 5**: Functions as the control unit for running machine learning models and handling commands with ROS 2.
 
 ## Frameworks
 This project is built using the following software frameworks:
