@@ -71,7 +71,7 @@ The following metrics will be used to assess the project's success:
 ### Task Partition
 - **Johnson Liu**:
 - **Yi Han**:
-- **Pinhao Hong**:
+- **Pinhao Hong**: Working with Johnson to Setup the Rasberry Pi and object recognition. In charge of writeup and website editing.
 
 ## 9. Related Work
 
