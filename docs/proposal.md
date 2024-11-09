@@ -70,7 +70,7 @@ The following metrics will be used to assess the project's success:
 ß
 ### Task Partition
 - **Johnson Liu**: Working on implementing object detection and tracking using pre-trained YOLO model on Raspberry Pi 5. Will also work on mapping and trajectory planning for the Unitree Go2 robotic dog.
-- **Yi Han**:
+- **Yi Han**: Working on speech recognition and command parsing on Raspberry Pi 5. Responsible for developing the human-robot interaction module.
 - **Pinhao Hong**: Working with Johnson to Setup the Rasberry Pi and object recognition. In charge of writeup and website editing.
 
 ## 9. Related Work
