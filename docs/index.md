@@ -12,6 +12,6 @@ The system determines object locations through YOLO's detection capabilities, wh
 # Required Submissions
 
 * [Proposal](proposal)
-* [Midterm Checkpoint Presentation Slides](http://)
+* [Midterm Checkpoint Presentation Slides](https://docs.google.com/presentation/d/1Gt3JxEI7Tgr8xa24CuuhVtI2xg-8QDQdszcHvqaT014/edit?usp=sharing)
 * [Final Presentation Slides](http://)
 * [Final Report](report)
