@@ -1,0 +1,6 @@
+[submodule "go2_ros2_sdk_ecem202a"]
+	path = go2_ros2_sdk_ecem202a
+	url = https://github.com/JL013001/go2_ros2_sdk_ecem202a.git
+[submodule "m-explore-ros2-ecem202a"]
+	path = m-explore-ros2-ecem202a
+	url = https://github.com/JL013001/m-explore-ros2-ecem202a.git
