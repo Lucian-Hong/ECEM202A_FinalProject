@@ -11,7 +11,7 @@
 
 # Abstract
 
-**Human-Robot Collaboration for Search and Retrieval** aims to improve search and retrieval tasks in complex and hazardous environments. The project leverages the **Unitree Go 2 robot dog**, **Raspberry Pi 5**, and software tools including **ROS 2**, **YOLO**, and **Vosk** for autonomous exploration, real-time object detection, and voice-controlled human-robot interaction. The system balances autonomy with human guidance, achieving efficient navigation and user-friendly interaction. Initial results show sub-second response times and high object detection accuracy, demonstrating the system’s potential across various domains.
+**Human-Robot Collaboration for Search and Retrieval** aims to improve search and retrieval tasks in complex and hazardous environments. The project leverages the **Unitree Go 2 robot dog**, **Raspberry Pi 5**, and software tools including **ROS 2**, **YOLO-World**, and **Vosk** for autonomous exploration, real-time object detection, and voice-controlled human-robot interaction. The system balances autonomy with human guidance, achieving efficient navigation and user-friendly interaction. Initial results show sub-second response times and high object detection accuracy, demonstrating the system’s potential across various domains.
 
 ---
 
@@ -24,7 +24,7 @@ The goal is to develop a system that improves the efficiency and safety of searc
 Existing systems focus on either fully autonomous robots or manual operations. Fully autonomous robots struggle with adaptability, while manual methods expose users to risks and inefficiencies. Current systems rarely integrate effective human-robot collaboration for dynamic environments.
 
 ### Novelty & Rationale
-This project integrates real-time object detection using **YOLO**, voice recognition with **Vosk**, and modular ROS 2 nodes for seamless collaboration. By combining autonomy with user interaction, the system offers adaptability and improved usability.
+This project integrates real-time object detection using **YOLO-World**, voice recognition with **Vosk**, and modular ROS 2 nodes for seamless collaboration. By combining autonomy with user interaction, the system offers adaptability and improved usability.
 
 ### Potential Impact
 If successful, this project will:
@@ -38,9 +38,9 @@ If successful, this project will:
 - Seamless integration of navigation, detection, and interaction nodes.
 
 ### Requirements for Success
-- **Skills:** Python programming, ROS 2, and machine learning expertise.
-- **Resources:** Unitree Go 2 robot, Raspberry Pi 5, external microphone, and speaker.
-- **Software:** YOLO, Vosk, pyttsx3, ROS 2.
+- **Skills:** Python & C++ programming, ROS 2, and machine learning expertise.
+- **Resources:** Unitree Go 2 robot, Raspberry Pi 5, and external microphone and speaker.
+- **Software:** ROS 2.
 
 ### Metrics of Success
 - **Response Time:** Commands executed in under one second.
