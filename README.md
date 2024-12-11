@@ -28,7 +28,7 @@ This project is built using the following software frameworks:
 - **ROS 2 (Robot Operating System 2)**: Provides a modular and scalable framework for robot software development.
 - **Libraries**:
   - **YOLO**: For real-time object detection and recognition.
-  - **Whisper**: Used for processing and interpreting voice commands.
+  - **Vosk**: Used for processing and interpreting voice commands.
   - **pyttsx3**: For generating spoken responses from the robot to the operator.
  
 ## Goal
