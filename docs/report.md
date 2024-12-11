@@ -131,7 +131,7 @@ When the system is started:
 
 - **Object Detection Node Activation:**
    - The **Object Detection Node** becomes active, receiving input from the `/object_to_detect` topic.
-   - It starts detecting the specified object using YOLO and publishes results to:
+   - It starts detecting the specified object using YOLO-World and publishes results to:
      - `/annotated_image`: Annotated images of detected objects.
      - `/detected_objects`: Metadata of detected objects.
 
