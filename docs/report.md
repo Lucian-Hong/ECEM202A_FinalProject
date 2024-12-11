@@ -71,7 +71,8 @@ If successful, this project will:
 
 ### From Human-Human Collaboration to Human-AI Collaboration
 - **Description:** Provides theoretical grounding for designing intuitive human-robot interfaces.
-- **Citation:** Amershi, S., et al., Communications of the ACM, 2019.
+- **Citation:** Dakuo Wang, Elizabeth Churchill, Pattie Maes, Xiangmin Fan, Ben Shneiderman, Yuanchun Shi, and Qianying Wang. 2020. From Human-Human Collaboration to Human-AI Collaboration: Designing AI Systems That Can Work Together with People. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA '20). Association for Computing Machinery, New York, NY, USA, 1–6. https://doi.org/10.1145/3334480.3381069
+
 
 ---
 
