@@ -1,4 +1,4 @@
-# Human-Robot Collaboration for Search and Retrieval
+# Human-Robot Collaboration for Search and Retrieval on Unitree Go 2 Platform
 
 ## Overview
 Welcome to the **Human-Robot Collaboration for Search and Retrieval** project! This project enhances efficiency and safety during search and retrieval operations in complex or hazardous environments. By combining autonomous navigation, machine learning for object recognition, and human-robot collaboration through voice commands, we aim to reduce manual workload and improve safety.
