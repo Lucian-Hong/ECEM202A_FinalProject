@@ -76,11 +76,11 @@ If successful, this project will:
 # 3. Technical Approach
 
 ### Key Components
-1. **Hardware:**
+- **Hardware:**
    - Unitree Go 2 robot
    - Raspberry Pi 5
    - External microphone and speaker
-2. **Software:**
+- **Software:**
    - ROS 2
    - YOLO for object detection
    - Vosk for voice recognition
@@ -111,31 +111,31 @@ When the system is started:
 - The **Object Detection Node** and **Explore/Navigation Node** remain in standby mode.
 
 #### 2. Voice Command Interaction
-1. **Listening for Wake Word:**
+- **Listening for Wake Word:**
    - The **Voice Command Node** listens for a wake word (e.g., “Hi Ben”) from the user.
    - Once the wake word is detected, the **Voice Command Node** becomes active.
 
-2. **Listening for Commands:**
+- **Listening for Commands:**
    - The user provides a search command, specifying the object to find (e.g., “Search for a bottle”).
    - The command is processed, and the required item is identified.
 
-3. **Command Confirmation:**
+- **Command Confirmation:**
    - The **Voice Command Node** confirms the received command and required object with the user.
    - If the user says "No," the node resets to listening for a new command.
    - If the user says "Yes," the command is forwarded for processing.
 
 #### 3. Object Detection and Exploration
-1. **Activating Search Nodes:**
+- **Activating Search Nodes:**
    - The **Voice Command Node** publishes the search word to the `/object_to_detect` topic.
    - It also confirms the object to detect and publishes it to the `/confirmed_object_to_detect` topic.
 
-2. **Object Detection Node Activation:**
+- **Object Detection Node Activation:**
    - The **Object Detection Node** becomes active, receiving input from the `/object_to_detect` topic.
    - It starts detecting the specified object using YOLO and publishes results to:
      - `/annotated_image`: Annotated images of detected objects.
      - `/detected_objects`: Metadata of detected objects.
 
-3. **Explore/Navigation Node Activation:**
+- **Explore/Navigation Node Activation:**
    - The **Explore/Navigation Node** uses input from:
      - `/confirmed_object_to_detect` topic.
      - `/detected_objects` topic.
@@ -143,14 +143,14 @@ When the system is started:
 
 
 #### 4. Item Search and Result Processing
-1. **Item Matching:**
+- **Item Matching:**
    - The **Object Detection Node** and **Explore/Navigation Node** continuously process sensor and camera data.
    - Once the specified item is found:
      - A match is checked from the `/confirmed_object_to_detect` topic and `/detected_objects` topic.
      - If the item matches the specified search, the system progresses.
    - If no match is found, the system continues searching.
 
-2. **Item Found:**
+- **Item Found:**
    - When the item is successfully located:
      - The **Explore/Navigation Node** stops the search process.
      - An annotated image of the detected item is saved.
