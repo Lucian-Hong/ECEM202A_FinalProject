@@ -61,9 +61,9 @@ If successful, this project will:
 - **Description:** Framework for autonomous exploration and mapping in ROS 2.
 - **Link:** [m-explore on GitHub](https://github.com/nesl/m-explore-ros2)
 
-### yoloworld
+### YOLO-World
 - **Description:** YOLO-based object detection for real-time, descriptive recognition.
-- **Link:** [yoloworld](https://www.yoloworld.cc/)
+- **Link:** [YOLO-World](https://www.yoloworld.cc/)
 
 ### Vosk
 - **Description:** Lightweight speech recognition with real-time processing.
