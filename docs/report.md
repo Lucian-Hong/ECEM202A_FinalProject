@@ -1,4 +1,6 @@
-# Table of Contents
+# Human-Robot Collaboration for Search and Retrieval on Unitree Go 2 Platform
+
+## Table of Contents
 * [Abstract](#abstract)
 * [Introduction](#1-introduction)
 * [Related Work](#2-related-work)
@@ -9,13 +11,13 @@
 
 ---
 
-# Abstract
+## Abstract
 
 **Human-Robot Collaboration for Search and Retrieval** aims to improve search and retrieval tasks in complex and hazardous environments. The project leverages the **Unitree Go 2 robot dog**, **Raspberry Pi 5**, and software tools including **ROS 2**, **YOLO-World**, and **Vosk** for autonomous exploration, real-time object detection, and voice-controlled human-robot interaction. The system balances autonomy with human guidance, achieving efficient navigation and user-friendly interaction. Initial results show sub-second response times and high object detection accuracy, demonstrating the system’s potential across various domains.
 
 ---
 
-# 1. Introduction
+## 1. Introduction
 
 ### Motivation & Objective
 The goal is to develop a system that improves the efficiency and safety of search and retrieval tasks in environments like disaster zones, warehouses, or industrial facilities. By combining robotics and voice commands, the project reduces manual effort and minimizes risks.
@@ -171,8 +173,8 @@ When the system is started:
 - **Object Detection Node:** Detects and publishes object information.
 - **Explore/Navigation Node:** Executes autonomous search and retrieval tasks.
 
-# 4. Evaluation and Results
+## 4. Evaluation and Results
 
-# 5. Discussion and Conclusions
+## 5. Discussion and Conclusions
 
-# 6. References
+## 6. References
