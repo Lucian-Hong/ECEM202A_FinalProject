@@ -58,5 +58,5 @@ The primary goal of this project is to develop an integrated system that:
 ## Required Submissions 
 [Project Proposal](https://github.com/Lucian-Hong/ECEM202A_FinalProject/blob/main/docs/proposal.md) <br>
 [Midterm Checkpoint Slides](https://docs.google.com/presentation/d/1Gt3JxEI7Tgr8xa24CuuhVtI2xg-8QDQdszcHvqaT014/edit?usp=sharing) <br>
-[Final Report]() <br>
-[Final Slides]() 
+[Final Report](https://github.com/Lucian-Hong/ECEM202A_FinalProject/blob/main/docs/report.md) <br>
+[Final Slides](https://docs.google.com/presentation/d/14P34LQReMFrGyrXcM7qhOxJFpf6Lc_D6rXD8oFYTKpw/edit?usp=sharing) 
