@@ -99,7 +99,7 @@ If successful, this project will:
 - **Object Detection Node:**
   - Detects objects in real-time and publishes results to relevant topics.
 - **Explore/Navigation Node:**
-  - Navigates autonomously to locate the specified item.
+  - Navigates autonomously to locate the specified goal/item.
 
 #### 1. Initialization
 The system begins with all nodes in an OFF state:
@@ -168,11 +168,6 @@ When the system is started:
 
 
 ---
-
-### Modular Node Design
-- **Voice Command Node:** Processes wake words and search commands.
-- **Object Detection Node:** Detects and publishes object information.
-- **Explore/Navigation Node:** Executes autonomous search and retrieval tasks.
 
 ## 4. Evaluation and Results
 
