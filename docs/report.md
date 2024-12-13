@@ -51,20 +51,20 @@ The following metrics will be used to evaluate the performance of the system acr
 #### **1. Object Detection & Voice Command Recognition Performance**
 - **Accuracy:**  
   Measure the system's ability to correctly identify objects and interpret voice commands.  
-  *Target*: Object detection accuracy > 90%, voice command recognition rate > 95%.  
+  *Target*: Object detection accuracy > 90%, voice command recognition rate > 90%.  
 
 - **Inference Speed & Latency:**  
   Time taken to process object detection and voice commands.  
-  *Target*: Inference latency < 200ms for each operation.  
+  *Target*: Inference latency < 500ms for each operation.  
 
 - **Error Rate:**  
   Rate of false positives/negatives in object detection and incorrect voice command interpretations.  
-  *Target*: Combined error rate < 5%.
+  *Target*: Combined error rate < 15%.
 
 #### **2. Autonomous Exploration & Navigation**
 - **Localization Accuracy:**  
   Evaluate the precision of the robot’s location estimates during exploration.  
-  *Target*: Average localization error < 10cm.  
+  *Target*: Average localization error < 0.5m.  
 
 - **Path Planning Efficiency:**  
   Measure the ability of the robot to compute and follow optimal paths to the target object.  
@@ -77,15 +77,15 @@ The following metrics will be used to evaluate the performance of the system acr
 #### **3. Task Execution with Different Difficulty Levels**
 - **Task Success Rate:**  
   The percentage of tasks completed successfully across varying difficulty levels (e.g., complex environments, overlapping objects).  
-  *Target*: Success rate > 90%.  
+  *Target*: Success rate > 80%.  
 
 - **Execution Time:**  
   Time taken to locate and retrieve the target object from the moment the command is issued.  
-  *Target*: Average execution time < 30 seconds per task.  
+  *Target*: Average execution time < 30 seconds per task for simple search tasks.  
 
 - **Error Handling:**  
   Evaluate the system's ability to recover from interruptions or errors (e.g., misdetections, voice misinterpretations).  
-  *Target*: Recovery success rate > 95%.  
+  *Target*: Recovery success rate > 80%.  
 
 #### **4. Usability & Setup Performance**
 - **Setup Time:**  
@@ -94,7 +94,7 @@ The following metrics will be used to evaluate the performance of the system acr
 
 - **Error Recovery:**  
   Assess the time and success rate of recovering from setup or runtime errors.  
-  *Target*: Recovery time < 1 minute, recovery success rate > 90%.  
+  *Target*: Recovery time < 1 minute, recovery success rate > 80%.  
 
 ---
 
