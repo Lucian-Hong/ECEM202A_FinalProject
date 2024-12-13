@@ -35,9 +35,9 @@ If successful, this project will:
 - Provide a scalable solution for diverse domains, including industrial and emergency applications.
 
 ### Challenges
-- Ensuring reliable voice recognition in noisy environments.
+- Localizing of ROS 2 and the SDKs we used on the Raspberry Pi 5.
 - Real-time performance with limited computational resources on the Raspberry Pi 5.
-- Seamless integration of navigation, detection, and interaction nodes.
+- Integration of navigation, object detection, and voice command nodes.
 
 ### Requirements for Success
 - **Skills:** Python & C++ programming, ROS 2, and machine learning expertise.
