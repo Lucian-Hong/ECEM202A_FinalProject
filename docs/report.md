@@ -61,8 +61,6 @@ The following metrics will be used to evaluate the performance of the system acr
   Rate of false positives/negatives in object detection and incorrect voice command interpretations.  
   *Target*: Combined error rate < 5%.
 
----
-
 #### **2. Autonomous Exploration & Navigation**
 - **Localization Accuracy:**  
   Evaluate the precision of the robot’s location estimates during exploration.  
@@ -76,8 +74,6 @@ The following metrics will be used to evaluate the performance of the system acr
   Evaluate the system's ability to navigate around obstacles without collisions.  
   *Target*: Zero collisions during testing.  
 
----
-
 #### **3. Task Execution with Different Difficulty Levels**
 - **Task Success Rate:**  
   The percentage of tasks completed successfully across varying difficulty levels (e.g., complex environments, overlapping objects).  
@@ -90,8 +86,6 @@ The following metrics will be used to evaluate the performance of the system acr
 - **Error Handling:**  
   Evaluate the system's ability to recover from interruptions or errors (e.g., misdetections, voice misinterpretations).  
   *Target*: Recovery success rate > 95%.  
-
----
 
 #### **4. Usability & Setup Performance**
 - **Setup Time:**  
