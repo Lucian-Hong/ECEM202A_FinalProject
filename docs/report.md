@@ -45,9 +45,32 @@ If successful, this project will:
 - **Software:** ROS 2.
 
 ### Metrics of Success
-- **Response Time:** Commands executed in under one second.
-- **Detection Accuracy:** High reliability for object recognition in varied scenarios.
-- **User Feedback:** Positive user satisfaction scores.
+
+To evaluate the effectiveness of the system, the following metrics will be measured:
+
+1. **Response Time**  
+   - Definition: The time elapsed from the user issuing a voice command to the system successfully completing the action.  
+   - Success Criteria: Average response time should be less than 1 second.
+
+2. **Object Detection Accuracy**  
+   - Definition: The system’s ability to correctly identify and localize objects during the search and retrieval process.  
+   - Success Criteria: Detection accuracy should exceed 90%, ensuring reliable performance in varied environments.
+
+3. **Navigation Efficiency**  
+   - Definition: The time and distance required for the robot to autonomously navigate and locate the specified object.  
+   - Success Criteria: Robot should identify and approach the target with minimal redundant movement.
+
+4. **Voice Command Recognition Rate**  
+   - Definition: The percentage of accurately interpreted and executed voice commands.  
+   - Success Criteria: Recognition rate should exceed 95%, even in environments with background noise.
+
+5. **User Satisfaction**  
+   - Definition: Feedback from users regarding the system’s usability, speed, and reliability.  
+   - Success Criteria: Achieve at least an 85% positive satisfaction score in usability testing.
+
+6. **System Robustness**  
+   - Definition: The ability of the system to handle interruptions or unexpected scenarios without failure.  
+   - Success Criteria: Less than 5% failure rate during extensive testing across diverse scenarios.
 
 ---
 
