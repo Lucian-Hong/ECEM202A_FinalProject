@@ -46,31 +46,61 @@ If successful, this project will:
 
 ### Metrics of Success
 
-To evaluate the effectiveness of the system, the following metrics will be measured:
+The following metrics will be used to evaluate the performance of the system across key functional areas:
 
-1. **Response Time**  
-   - Definition: The time elapsed from the user issuing a voice command to the system successfully completing the action.  
-   - Success Criteria: Average response time should be less than 1 second.
+#### **1. Object Detection & Voice Command Recognition Performance**
+- **Accuracy:**  
+  Measure the system's ability to correctly identify objects and interpret voice commands.  
+  *Target*: Object detection accuracy > 90%, voice command recognition rate > 95%.  
 
-2. **Object Detection Accuracy**  
-   - Definition: The system’s ability to correctly identify and localize objects during the search and retrieval process.  
-   - Success Criteria: Detection accuracy should exceed 90%, ensuring reliable performance in varied environments.
+- **Inference Speed & Latency:**  
+  Time taken to process object detection and voice commands.  
+  *Target*: Inference latency < 200ms for each operation.  
 
-3. **Navigation Efficiency**  
-   - Definition: The time and distance required for the robot to autonomously navigate and locate the specified object.  
-   - Success Criteria: Robot should identify and approach the target with minimal redundant movement.
+- **Error Rate:**  
+  Rate of false positives/negatives in object detection and incorrect voice command interpretations.  
+  *Target*: Combined error rate < 5%.
 
-4. **Voice Command Recognition Rate**  
-   - Definition: The percentage of accurately interpreted and executed voice commands.  
-   - Success Criteria: Recognition rate should exceed 95%, even in environments with background noise.
+---
 
-5. **User Satisfaction**  
-   - Definition: Feedback from users regarding the system’s usability, speed, and reliability.  
-   - Success Criteria: Achieve at least an 85% positive satisfaction score in usability testing.
+#### **2. Autonomous Exploration & Navigation**
+- **Localization Accuracy:**  
+  Evaluate the precision of the robot’s location estimates during exploration.  
+  *Target*: Average localization error < 10cm.  
 
-6. **System Robustness**  
-   - Definition: The ability of the system to handle interruptions or unexpected scenarios without failure.  
-   - Success Criteria: Less than 5% failure rate during extensive testing across diverse scenarios.
+- **Path Planning Efficiency:**  
+  Measure the ability of the robot to compute and follow optimal paths to the target object.  
+  *Target*: Robot minimizes redundant movements and reaches the target efficiently.  
+
+- **Collision Avoidance:**  
+  Evaluate the system's ability to navigate around obstacles without collisions.  
+  *Target*: Zero collisions during testing.  
+
+---
+
+#### **3. Task Execution with Different Difficulty Levels**
+- **Task Success Rate:**  
+  The percentage of tasks completed successfully across varying difficulty levels (e.g., complex environments, overlapping objects).  
+  *Target*: Success rate > 90%.  
+
+- **Execution Time:**  
+  Time taken to locate and retrieve the target object from the moment the command is issued.  
+  *Target*: Average execution time < 30 seconds per task.  
+
+- **Error Handling:**  
+  Evaluate the system's ability to recover from interruptions or errors (e.g., misdetections, voice misinterpretations).  
+  *Target*: Recovery success rate > 95%.  
+
+---
+
+#### **4. Usability & Setup Performance**
+- **Setup Time:**  
+  Measure the time required to initialize the system and prepare it for operation.  
+  *Target*: Setup time < 5 minutes.  
+
+- **Error Recovery:**  
+  Assess the time and success rate of recovering from setup or runtime errors.  
+  *Target*: Recovery time < 1 minute, recovery success rate > 90%.  
 
 ---
 
