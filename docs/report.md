@@ -26,7 +26,7 @@ The goal is to develop a system that improves the efficiency and safety of searc
 Existing systems focus on either fully autonomous robots or manual operations. Fully autonomous robots struggle with adaptability, while manual methods expose users to risks and inefficiencies. Current systems rarely integrate effective human-robot collaboration for dynamic environments.
 
 ### Novelty & Rationale
-This project integrates real-time object detection using **YOLO-World**, voice recognition with **Vosk**, and modular ROS 2 nodes for seamless collaboration. By combining autonomy with user interaction, the system offers adaptability and improved usability.
+This project integrates real-time object detection using **YOLO-World**, voice recognition with **Vosk**, and modular ROS 2 nodes for human-robot collaboration. By combining autonomy with user interaction, the system offers adaptability and improved usability in search and retrieval tasks.
 
 ### Potential Impact
 If successful, this project will:
