@@ -31,7 +31,7 @@ This project integrates real-time object detection using **YOLO-World**, voice r
 ### Potential Impact
 If successful, this project will:
 - Enhance operational efficiency in search and retrieval tasks.
-- Improve safety for operators in hazardous environments.
+- Improve safety for operators in complex environments.
 - Provide a scalable solution for diverse domains, including industrial and emergency applications.
 
 ### Challenges
