@@ -1,4 +1,4 @@
-# Human-Robot Collaboration for Search and Retrieval
+# Human-Robot Collaboration for Search and Retrieval on Unitree Go 2 Platform
 
 ## Overview
 Welcome to the **Human-Robot Collaboration for Search and Retrieval** project! This project enhances efficiency and safety during search and retrieval operations in complex or hazardous environments. By combining autonomous navigation, machine learning for object recognition, and human-robot collaboration through voice commands, we aim to reduce manual workload and improve safety.
@@ -28,7 +28,7 @@ This project is built using the following software frameworks:
 - **ROS 2 (Robot Operating System 2)**: Provides a modular and scalable framework for robot software development.
 - **Libraries**:
   - **YOLO**: For real-time object detection and recognition.
-  - **Whisper**: Used for processing and interpreting voice commands.
+  - **Vosk**: Used for processing and interpreting voice commands.
   - **pyttsx3**: For generating spoken responses from the robot to the operator.
  
 ## Goal
@@ -58,5 +58,5 @@ The primary goal of this project is to develop an integrated system that:
 ## Required Submissions 
 [Project Proposal](https://github.com/Lucian-Hong/ECEM202A_FinalProject/blob/main/docs/proposal.md) <br>
 [Midterm Checkpoint Slides](https://docs.google.com/presentation/d/1Gt3JxEI7Tgr8xa24CuuhVtI2xg-8QDQdszcHvqaT014/edit?usp=sharing) <br>
-[Final Report]() <br>
-[Final Slides]() 
+[Final Report](https://github.com/Lucian-Hong/ECEM202A_FinalProject/blob/main/docs/report.md) <br>
+[Final Slides](https://docs.google.com/presentation/d/14P34LQReMFrGyrXcM7qhOxJFpf6Lc_D6rXD8oFYTKpw/edit?usp=sharing) 
