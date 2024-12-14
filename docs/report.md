@@ -267,21 +267,12 @@ When the system is started:
 ---
 
 ## 5. Discussion and Conclusions
+Our project successfully developed an **efficient human-robot interaction system** that integrates **autonomous exploration**, **object detection**, and **voice command interaction**. By combining **ROS 2**, **YOLO-based models**, and **Vosk speech recognition**, we achieved a modular and scalable system capable of performing object search tasks, such as locating a bottle behind a box, even in messy environments. The integration of these components in Docker ensures portability and ease of deployment, making our solution adaptable to various real-world scenarios.
 
+While the system demonstrated strong performance in simple and moderately cluttered environments, challenges remain in navigating highly dynamic or constrained spaces. Path planning efficiency was limited by narrow pathways and obstacles, leading to higher collision rates. Additionally, the lightweight Vosk model, while effective for simple commands, struggled with nuanced voice interactions.
 
-- **Achievements**
-  - Successfully localized **ROS 2** and deployed **coco_detector** and **m-explore** on Raspberry Pi 5 for navigation and object detection.  
-  - Implemented a **voice command system** using Vosk, enabling the robot to respond to user commands.   
-  - Integrated all functionalities in **Docker**, ensuring portability and ease of deployment.
-  - Demonstrated the ability to locate a **bottle behind a box** in a messy environment, showcasing basic object search capabilities. 
-  - In a word, we developed an **efficient human-robot interaction system**, integrating **ROS 2**, **YOLOv8-based object detection**, and **Vosk voice recognition** on Raspberry Pi 5. The system achieved **autonomous object search** in complex environments, successfully locating items like a bottle behind a box. With all components deployed in Docker, the solution is modular and scalable, demonstrating the potential for robust operation in real-world scenarios.
+Future work will focus on addressing these limitations by **training custom YOLO models** for personalized object recognition, optimizing **path planning algorithms** to improve navigation in complex environments, and integrating a **robotic arm** for object retrieval. Enhancements to the voice command system, such as better recognition accuracy and wake-word customization, will also be pursued to improve human-robot collaboration. With these advancements, our system has the potential to provide reliable and adaptable solutions for search-and-retrieval tasks, including use cases like assistive care and disaster response.
 
-- **Future Plans**
-  - **Train Custom Models**: Develop and train customized object detection models to recognize more descriptive items, such as personal belongings (e.g., keys, wallets).  
-  - **Advanced Object Retrieval**: Implement a robotic arm to allow the robot to retrieve located objects autonomously.  
-  - **Enhance Object Search in Complex Environments**: Improve the system to handle more dynamic and cluttered scenarios efficiently.  
-  - **Improve Path Planning Algorithm**: Optimize path planning to navigate complex environments with fewer collisions and better obstacle avoidance.  
-  - **Refine Voice Command System**: Add support for wake-word customization and refine the recognition accuracy for nuanced commands.  
 
 ---
 
