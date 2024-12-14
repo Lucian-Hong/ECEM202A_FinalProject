@@ -98,7 +98,7 @@ The following metrics will be used to evaluate the performance of the system acr
 
 ---
 
-# 2. Related Work
+## 2. Related Work
 
 ### go2\_ros2\_sdk
 - **Description:** Foundational tools and APIs for mapping, navigation, and motion control.
@@ -122,7 +122,7 @@ The following metrics will be used to evaluate the performance of the system acr
 
 ---
 
-# 3. Technical Approach
+## 3. Technical Approach
 
 ### Key Components
 - **Hardware:**
