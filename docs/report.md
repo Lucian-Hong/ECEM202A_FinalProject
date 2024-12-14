@@ -219,30 +219,31 @@ When the system is started:
 
 | **Metric**              | **Voice Command**                     | **Object Detection**              |
 |--------------------------|----------------------------------------|------------------------------------|
-| **Accuracy**             | - Controlled Environment: 85%         | - Controlled Environment: 90%     |
-|                          | - Task-Specific Commands: 88%         | - Custom Object Recognition: 80%  |
-| **Inference Speed & Latency** | - Average Response Time: <1 second | - Detection Time per Frame: 50ms  |
-|                          | - Maximum Latency: 2 seconds          | - Maximum Latency: 100ms          |
-| **Error Rate**           | - Controlled Environment: 15%         | - Controlled Environment: 10%     |
+| **Accuracy**             | - Controlled Environment: 80%         | - Controlled Environment: 95%     |
+|                          | - Task-Specific Commands: 70%         | - Custom Object Recognition: 85%  |
+| **Inference Speed & Latency** | - Average Response Time: <2 seconds | - Detection Time per Frame: 50ms  |
+|                          | - Maximum Latency: 3 seconds          | - Maximum Latency: 100ms          |
+| **Error Rate**           | - Controlled Environment: 20%         | - Controlled Environment: 5%     |
 
 
-- Our **object detection model** is based on **YOLO-World**, which performed extremely well in detecting simple and moderately complex objects, with an accuracy of XX%. However, performance decreased slightly for more complex objects or cluttered environments.  
+- Our **object detection model** is based on **YOLO-World**, which performed extremely well in detecting simple and moderately complex objects, with an accuracy of 95%. However, performance decreased slightly for more complex objects or cluttered environments.  
 - The accuracy of **voice command recognition** is limited by the constraints of the available models. Powered by **Vosk**, it handled simple commands effectively but struggled with more nuanced or complex instructions, particularly in dynamic environments, reflecting the limitations of lightweight models in balancing efficiency and accuracy.
 
 
 - **Autonomous Exploration & Navigation**
-  - Localization Accuracy
+  - **Path Planning Efficiency**
+    The robot demonstrated excellent path planning in wide open areas, achieving smooth navigation with a full range of motion. However, in a messy environment, the path planning system struggled, resulting in a **collision rate of 30%** due to restricted motion and tight spaces.
 
-  - Path Planning Efficiency
+  - **Collision Avoidance**
+    The collision avoidance system effectively reduced severe impacts, achieving a **70% collision avoidance success rate** in a messy environment. However, its relatively cautious behavior in narrow paths led to frequent stops, which negatively impacted path planning efficiency.
 
-  - Collision Avoidance
 
 - **Task Execution with Different Difficulty Levels**
 
 | **Metric**            | **Difficult Tasks**         | **Moderate Tasks**        |
 |------------------------|-----------------------------|---------------------------|
 | **Task Success Rate**  | 50%                        | 60%                       |
-| **Execution Time**     | XX minutes (on average)    | XX minutes (on average)   |
+| **Execution Time**     | 114 seconds (on average)    | 52 seconds (on average)   |
 | **Error Handling**     | Requires manual restart after stalling; stops after 5 seconds with feedback | Occasional missteps, manageable errors |
 | **Setup Time**         | Long due to narrow paths and parameter tuning | Moderate with some alignment issues |
 
