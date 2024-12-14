@@ -277,3 +277,23 @@ Future work will focus on addressing these limitations by **training custom YOLO
 ---
 
 ## 6. References
+
+### go2\_ros2\_sdk
+- **Description:** Foundational tools and APIs for mapping, navigation, and motion control.
+- **Link:** [go2\_ros2\_sdk on GitHub](https://github.com/nesl/go2_ros2_sdk)
+
+### m-explore
+- **Description:** Framework for autonomous exploration and mapping in ROS 2.
+- **Link:** [m-explore on GitHub](https://github.com/nesl/m-explore-ros2)
+
+### YOLO-World
+- **Description:** YOLO-based object detection for real-time, descriptive recognition.
+- **Link:** [YOLO-World](https://www.yoloworld.cc/)
+
+### Vosk
+- **Description:** Lightweight speech recognition with real-time processing.
+- **Link:** [Vosk](https://alphacephei.com/vosk/)
+
+### From Human-Human Collaboration to Human-AI Collaboration
+- **Description:** Provides theoretical grounding for designing intuitive human-robot interfaces.
+- **Citation:** Dakuo Wang, Elizabeth Churchill, Pattie Maes, Xiangmin Fan, Ben Shneiderman, Yuanchun Shi, and Qianying Wang. 2020. From Human-Human Collaboration to Human-AI Collaboration: Designing AI Systems That Can Work Together with People. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA '20). Association for Computing Machinery, New York, NY, USA, 1–6. https://doi.org/10.1145/3334480.3381069
