@@ -267,20 +267,21 @@ When the system is started:
 ---
 
 ## 5. Discussion and Conclusions
+
+
 - **Achievements**
-Localization of ROS 2 on Raspberry Pi 5.
-Localization of coco_detector & m-explore on Raspberry Pi 5.
-Customizable voice command interaction.
-Integration of the above parts in Docker.
-Ability to perform simple search tasks based on voice commands.
+  - Successfully localized **ROS 2** and deployed **coco_detector** and **m-explore** on Raspberry Pi 5 for navigation and object detection.  
+  - Implemented a **voice command system** using Vosk, enabling the robot to respond to user commands.   
+  - Integrated all functionalities in **Docker**, ensuring portability and ease of deployment.
+  - Demonstrated the ability to locate a **bottle behind a box** in a messy environment, showcasing basic object search capabilities. 
+  - In a word, we developed an **efficient human-robot interaction system**, integrating **ROS 2**, **YOLOv8-based object detection**, and **Vosk voice recognition** on Raspberry Pi 5. The system achieved **autonomous object search** in complex environments, successfully locating items like a bottle behind a box. With all components deployed in Docker, the solution is modular and scalable, demonstrating the potential for robust operation in real-world scenarios.
 
 - **Future Plans**
-Optimizing the integration between each node.
-Developing localization function in ROS 2 and integrating with current parts.
-Refining current auto-exploration and navigation.
-Train custom lightweight YOLO models for higher performance in specific scenarios.
-Modifying the voice recognition module for better adaptation to Raspberry Pi.
-Developing specialized functions: recognizing assistance-needed individuals.
+  - **Train Custom Models**: Develop and train customized object detection models to recognize more descriptive items, such as personal belongings (e.g., keys, wallets).  
+  - **Advanced Object Retrieval**: Implement a robotic arm to allow the robot to retrieve located objects autonomously.  
+  - **Enhance Object Search in Complex Environments**: Improve the system to handle more dynamic and cluttered scenarios efficiently.  
+  - **Improve Path Planning Algorithm**: Optimize path planning to navigate complex environments with fewer collisions and better obstacle avoidance.  
+  - **Refine Voice Command System**: Add support for wake-word customization and refine the recognition accuracy for nuanced commands.  
 
 ---
 
