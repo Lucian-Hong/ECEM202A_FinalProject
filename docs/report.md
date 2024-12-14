@@ -216,8 +216,74 @@ When the system is started:
 
 ---
 
-## 4. Evaluation and Results
+#### 4. Evaluation and Results 
+- **Object Detection & Voice Command Recognition Performance**
 
-## 5. Discussion and Conclusions
+| **Metric**              | **Voice Command**                     | **Object Detection**              |
+|--------------------------|----------------------------------------|------------------------------------|
+| **Accuracy**             | - Controlled Environment: 85%         | - Controlled Environment: 90%     |
+|                          | - Task-Specific Commands: 88%         | - Custom Object Recognition: 80%  |
+| **Inference Speed & Latency** | - Average Response Time: <1 second | - Detection Time per Frame: 50ms  |
+|                          | - Maximum Latency: 2 seconds          | - Maximum Latency: 100ms          |
+| **Error Rate**           | - Controlled Environment: 15%         | - Controlled Environment: 10%     |
 
-## 6. References
+
+- Our **object detection model** is based on **YOLO-World**, which performed extremely well in detecting simple and moderately complex objects, with an accuracy of XX%. However, performance decreased slightly for more complex objects or cluttered environments.  
+- The accuracy of **voice command recognition** is limited by the constraints of the available models. Powered by **Vosk**, it handled simple commands effectively but struggled with more nuanced or complex instructions, particularly in dynamic environments, reflecting the limitations of lightweight models in balancing efficiency and accuracy.
+
+
+- **Autonomous Exploration & Navigation**
+  - Localization Accuracy
+
+  - Path Planning Efficiency
+
+  - Collision Avoidance
+
+- **Task Execution with Different Difficulty Levels**
+
+| **Metric**            | **Difficult Tasks**         | **Moderate Tasks**        |
+|------------------------|-----------------------------|---------------------------|
+| **Task Success Rate**  | 50%                        | 60%                       |
+| **Execution Time**     | XX minutes (on average)    | XX minutes (on average)   |
+| **Error Handling**     | Requires manual restart after stalling; stops after 5 seconds with feedback | Occasional missteps, manageable errors |
+| **Setup Time**         | Long due to narrow paths and parameter tuning | Moderate with some alignment issues |
+
+  - **Testing Methodology**:
+     - Each difficulty level was tested **10 times** to ensure consistency and reliability of the results.   
+     - **Moderate Task**: Conducted in an empty room with a simple obstacle (e.g., the goal hidden behind a box).  
+     - **Difficult Task**: Conducted in a cluttered and messy room with narrow paths and obstacles, simulating a more realistic environment.
+       
+  - **Boundary Box Parameter Tuning**:
+     - Adjusting the boundary box parameters caused the robot to occasionally circle in narrow spaces or along edges, requiring manual intervention to resume operation.
+     - In tight areas, the robot struggled to navigate effectively and often favored one side of the path, impacting success rates for difficult tasks.
+
+  - **Error Recovery**:
+     - For **difficult tasks**, the robot provided feedback ("cannot move") after stalling for 5 seconds, but manual restarts were necessary to continue.  
+     - For **moderate tasks**, minor corrections resolved most issues without significant delays.  
+
+  - **Recommendations**:
+     - Further optimize navigation algorithms and boundary box parameters to handle narrow spaces and avoid unnecessary stops.
+     - Implement automated recovery mechanisms to reduce reliance on manual restarts during difficult tasks.
+
+
+
+
+
+#### 5. Discussion and Conclusions
+- **Achievements**
+Localization of ROS 2 on Raspberry Pi 5.
+Localization of coco_detector & m-explore on Raspberry Pi 5.
+Customizable voice command interaction.
+Integration of the above parts in Docker.
+Ability to perform simple search tasks based on voice commands.
+
+- **Future Plans**
+Optimizing the integration between each node.
+Developing localization function in ROS 2 and integrating with current parts.
+Refining current auto-exploration and navigation.
+Train custom lightweight YOLO models for higher performance in specific scenarios.
+Modifying the voice recognition module for better adaptation to Raspberry Pi.
+Developing specialized functions: recognizing assistance-needed individuals.
+
+
+#### 6. References
