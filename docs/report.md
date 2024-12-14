@@ -216,7 +216,7 @@ When the system is started:
 
 ---
 
-#### 4. Evaluation and Results 
+### 4. Evaluation and Results 
 - **Object Detection & Voice Command Recognition Performance**
 
 | **Metric**              | **Voice Command**                     | **Object Detection**              |
@@ -269,7 +269,7 @@ When the system is started:
 
 
 
-#### 5. Discussion and Conclusions
+### 5. Discussion and Conclusions
 - **Achievements**
 Localization of ROS 2 on Raspberry Pi 5.
 Localization of coco_detector & m-explore on Raspberry Pi 5.
@@ -286,4 +286,4 @@ Modifying the voice recognition module for better adaptation to Raspberry Pi.
 Developing specialized functions: recognizing assistance-needed individuals.
 
 
-#### 6. References
+### 6. References
