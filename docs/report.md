@@ -120,7 +120,6 @@ The following metrics will be used to evaluate the performance of the system acr
 - **Description:** Provides theoretical grounding for designing intuitive human-robot interfaces.
 - **Citation:** Dakuo Wang, Elizabeth Churchill, Pattie Maes, Xiangmin Fan, Ben Shneiderman, Yuanchun Shi, and Qianying Wang. 2020. From Human-Human Collaboration to Human-AI Collaboration: Designing AI Systems That Can Work Together with People. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA '20). Association for Computing Machinery, New York, NY, USA, 1–6. https://doi.org/10.1145/3334480.3381069
 
-
 ---
 
 # 3. Technical Approach
@@ -213,10 +212,9 @@ When the system is started:
   - The **Voice Command Node** returns to standby mode, ready for the next command.
   - The **Object Detection Node** and **Explore/Navigation Node** also return to standby mode.
 
-
 ---
 
-### 4. Evaluation and Results 
+## 4. Evaluation and Results 
 - **Object Detection & Voice Command Recognition Performance**
 
 | **Metric**              | **Voice Command**                     | **Object Detection**              |
@@ -265,11 +263,9 @@ When the system is started:
      - Further optimize navigation algorithms and boundary box parameters to handle narrow spaces and avoid unnecessary stops.
      - Implement automated recovery mechanisms to reduce reliance on manual restarts during difficult tasks.
 
+---
 
-
-
-
-### 5. Discussion and Conclusions
+## 5. Discussion and Conclusions
 - **Achievements**
 Localization of ROS 2 on Raspberry Pi 5.
 Localization of coco_detector & m-explore on Raspberry Pi 5.
@@ -285,5 +281,6 @@ Train custom lightweight YOLO models for higher performance in specific scenario
 Modifying the voice recognition module for better adaptation to Raspberry Pi.
 Developing specialized functions: recognizing assistance-needed individuals.
 
+---
 
-### 6. References
+## 6. References
