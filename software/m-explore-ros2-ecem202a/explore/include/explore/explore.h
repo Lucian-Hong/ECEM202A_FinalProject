@@ -50,6 +50,7 @@
 #include <mutex>
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/bool.hpp>
+#include <std_msgs/msg/string.hpp>
 #include <std_msgs/msg/color_rgba.hpp>
 #include <string>
 #include <vector>
@@ -94,6 +95,8 @@ private:
    */
   void makePlan();
 
+  void startExplorationTimer();
+
   // /**
   //  * @brief  Publish a frontiers as markers
   //  */
@@ -128,6 +131,9 @@ private:
   rclcpp::Subscription<vision_msgs::msg::Detection2DArray>::SharedPtr image_detection_subscription_;
   void detectedObjectCallback(const vision_msgs::msg::Detection2DArray::SharedPtr msg);
   
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr confirmed_object_subscription_;
+  void confirmedObjectCallback(const std_msgs::msg::String::SharedPtr msg);
+
   void approachObjectCallback(nav2_msgs::action::NavigateToPose::Impl::CancelGoalService::Response::SharedPtr);
   
   void feedback_callback(rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>::SharedPtr, const std::shared_ptr<const nav2_msgs::action::NavigateToPose::Feedback> feedback);
@@ -151,7 +157,7 @@ private:
   bool return_to_init_;
   std::string robot_base_frame_;
   bool resuming_ = false;
-  
+  std::string confirmed_object_;
   
   std::vector<geometry_msgs::msg::Point> box_detected_;
   std::vector<geometry_msgs::msg::Point> box_sensed_;

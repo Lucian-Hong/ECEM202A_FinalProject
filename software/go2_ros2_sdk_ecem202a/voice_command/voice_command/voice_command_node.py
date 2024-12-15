@@ -16,7 +16,7 @@ import cv2
 class VoiceCommandNode(Node):
     def __init__(self):
         super().__init__('voice_command_node')
-        self.publisher = self.create_publisher(String, 'command_topic', 10)
+        self.publisher = self.create_publisher(String, 'object_to_detect', 10)
         self.detection_results = None
         self.searching = False
         self.item = None
@@ -68,6 +68,7 @@ class VoiceCommandNode(Node):
 
     def image_callback(self, msg: Image):
         if self.item_found:
+            self.say(f"I have found the {self.item}.")
             try:
                 # Convert ROS Image message to OpenCV image
                 cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="rgb8")
@@ -77,9 +78,10 @@ class VoiceCommandNode(Node):
                 cv2.imwrite(filename, cv_image)
 
                 print(f"Image saved as {filename}")
+                self.say(f"I have saved an image of the location of the {self.item} to your device.")
             except Exception as e:
                 print(f"Failed to save image: {e}")
-            self.awake = True
+            self.awake = False
             self.item_found = False
 
     def say(self, text):

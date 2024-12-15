@@ -61,13 +61,13 @@ Explore::Explore()
 {
   double timeout;
   double min_frontier_size;
-  this->declare_parameter<float>("planner_frequency", 1.0);
+  this->declare_parameter<float>("planner_frequency", 0.5);
   this->declare_parameter<float>("progress_timeout", 30.0);
   this->declare_parameter<bool>("visualize", false);
   this->declare_parameter<float>("potential_scale", 1e-3);
   this->declare_parameter<float>("orientation_scale", 0.0);
   this->declare_parameter<float>("gain_scale", 1.0);
-  this->declare_parameter<float>("min_frontier_size", 0.5);
+  this->declare_parameter<float>("min_frontier_size", 1.5); //0.5
   this->declare_parameter<bool>("return_to_init", false);
 
   this->get_parameter("planner_frequency", planner_frequency_);
@@ -99,6 +99,8 @@ Explore::Explore()
                                                                      10);
   }
 
+  confirmed_object_ = "None";
+
   // Subscription to resume or stop exploration
   resume_subscription_ = this->create_subscription<std_msgs::msg::Bool>(
       "explore/resume", 10,
@@ -107,6 +109,10 @@ Explore::Explore()
   image_detection_subscription_ = this->create_subscription<vision_msgs::msg::Detection2DArray>(
       "detected_objects", 10,
       std::bind(&Explore::detectedObjectCallback, this, std::placeholders::_1));
+
+  confirmed_object_subscription_ = this->create_subscription<std_msgs::msg::String>(
+      "confirmed_object_to_detect", 10,
+      std::bind(&Explore::confirmedObjectCallback, this, std::placeholders::_1));
       
   joy_publisher_ =
         this->create_publisher<sensor_msgs::msg::Joy>("joy", 10);
@@ -131,12 +137,18 @@ Explore::Explore()
       return_to_init_ = false;
     }
   }
+  // exploring_timer_ = this->create_wall_timer(
+      // std::chrono::milliseconds((uint16_t)(1000.0 / planner_frequency_)),
+      // [this]() { makePlan(); });
+  
+  // Start exploration right away
+  // makePlan();
+}
 
-  exploring_timer_ = this->create_wall_timer(
+void Explore::startExplorationTimer() {
+    exploring_timer_ = this->create_wall_timer(
       std::chrono::milliseconds((uint16_t)(1000.0 / planner_frequency_)),
       [this]() { makePlan(); });
-  // Start exploration right away
-  makePlan();
 }
 
 Explore::~Explore()
@@ -151,6 +163,16 @@ void Explore::resumeCallback(const std_msgs::msg::Bool::SharedPtr msg)
   } else {
     stop();
   }
+}
+
+void Explore::confirmedObjectCallback(const std_msgs::msg::String::SharedPtr msg)
+{
+  // print for debugging
+  RCLCPP_INFO(logger_, "Received message: %s", msg->data.c_str());
+  RCLCPP_INFO(logger_, "Object detection confirmed. Starting exploration.");
+  confirmed_object_ = msg->data;
+  startExplorationTimer();
+  makePlan();
 }
 
 void Explore::approachObjectCallback(nav2_msgs::action::NavigateToPose::Impl::CancelGoalService::Response::SharedPtr){
@@ -182,39 +204,49 @@ void Explore::approachObjectCallback(nav2_msgs::action::NavigateToPose::Impl::Ca
 void Explore::detectedObjectCallback(const vision_msgs::msg::Detection2DArray::SharedPtr msg)
 {
   for (const auto& det : msg->detections){
-    
-    if(det.results[0].hypothesis.class_id == "box"){
-        auto robot_pose = costmap_client_.getRobotPose();
+    RCLCPP_INFO(logger_, "Detected object: %s", det.results[0].hypothesis.class_id.c_str());
+    RCLCPP_INFO(logger_, "Searching object: %s", confirmed_object_.c_str());
+    if(det.results[0].hypothesis.class_id == confirmed_object_){
+        RCLCPP_INFO(logger_, "Target object found. Stopping action.");
+
+      // Cancel exploration and handle found object
+        exploring_timer_->cancel();
+        chosen_box_ = det.results[0].pose.pose.position;
+        move_base_client_->async_cancel_all_goals(std::bind(&Explore::approachObjectCallback, this, std::placeholders::_1));
+            
+        currentState = CANCELING;
+        return;  // Stop further processing
+        // auto robot_pose = costmap_client_.getRobotPose();
         
-        double distance = sqrt(pow((double(det.results[0].pose.pose.position.x) - double(robot_pose.position.x)), 2.0) +
-                               pow((double(det.results[0].pose.pose.position.y) - double(robot_pose.position.y)), 2.0));
+        // double distance = sqrt(pow((double(det.results[0].pose.pose.position.x) - double(robot_pose.position.x)), 2.0) +
+        //                        pow((double(det.results[0].pose.pose.position.y) - double(robot_pose.position.y)), 2.0));
                                
-        if(distance <= 2){
+        // if(distance <= 2){
         
-            for (const auto& det_vec : {std::cref(box_detected_), std::cref(box_sensed_)}) {
-                for (auto det_point : det_vec.get()) {
+        //     for (const auto& det_vec : {std::cref(box_detected_), std::cref(box_sensed_)}) {
+        //         for (auto det_point : det_vec.get()) {
         
-                    double object_distance = sqrt(pow((double(det.results[0].pose.pose.position.x) - double(det_point.x)), 2.0) +
-                                   pow((double(det.results[0].pose.pose.position.y) - double(det_point.y)), 2.0));
+        //             double object_distance = sqrt(pow((double(det.results[0].pose.pose.position.x) - double(det_point.x)), 2.0) +
+        //                            pow((double(det.results[0].pose.pose.position.y) - double(det_point.y)), 2.0));
                                    
-                    if (object_distance <= 1 and currentState == IDLE){
-                        if(det_vec.get() == box_detected_){
-                            RCLCPP_INFO(logger_, "Canceling goal.");
+        //             if (object_distance <= 1 and currentState == IDLE){
+        //                 if(det_vec.get() == box_detected_){
+        //                     RCLCPP_INFO(logger_, "Canceling goal.");
                             
-                            exploring_timer_->cancel();
-                            chosen_box_ = det.results[0].pose.pose.position;
-                            move_base_client_->async_cancel_all_goals(std::bind(&Explore::approachObjectCallback, this, std::placeholders::_1));
+        //                     exploring_timer_->cancel();
+        //                     chosen_box_ = det.results[0].pose.pose.position;
+        //                     move_base_client_->async_cancel_all_goals(std::bind(&Explore::approachObjectCallback, this, std::placeholders::_1));
                             
-                            currentState = CANCELING;
+        //                     currentState = CANCELING;
                             
                             
-                        }
-                        return;
-                    }
-                }
-            }
-            box_detected_.push_back(det.results[0].pose.pose.position);
-        }
+        //                 }
+        //                 return;
+        //             }
+        //         }
+        //     }
+        //     box_detected_.push_back(det.results[0].pose.pose.position);
+        // }
         
     }
   }
@@ -396,6 +428,7 @@ void Explore::makePlan()
         reachedGoal(result, target_position);
       };
   move_base_client_->async_send_goal(goal, send_goal_options);
+  rclcpp::sleep_for(std::chrono::milliseconds(2000)); // introduce a little delay
 }
 
 void Explore::returnToInitialPose()
