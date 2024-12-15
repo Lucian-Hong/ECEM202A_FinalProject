@@ -260,10 +260,6 @@ When the system is started:
      - For **difficult tasks**, the robot provided feedback ("cannot move") after stalling for 5 seconds, but manual restarts were necessary to continue.  
      - For **moderate tasks**, minor corrections resolved most issues without significant delays.  
 
-  - **Recommendations**:
-     - Further optimize navigation algorithms and boundary box parameters to handle narrow spaces and avoid unnecessary stops.
-     - Implement automated recovery mechanisms to reduce reliance on manual restarts during difficult tasks.
-
 ---
 
 ## 5. Discussion and Conclusions
