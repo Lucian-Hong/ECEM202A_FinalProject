@@ -235,7 +235,6 @@ When the system is started:
 |                          | - Maximum Latency: 3 seconds          | - Maximum Latency: 100ms          |
 | **Error Rate**           | - Controlled Environment: 20%         | - Controlled Environment: 5%     |
 
-
 - Our **object detection model** is based on **YOLO-World**, which performed extremely well in detecting simple and moderately complex objects, with an accuracy of 95%. However, performance decreased slightly for more complex objects or cluttered environments.  
 - The accuracy of **voice command recognition** is limited by the constraints of the available models. Powered by **Vosk**, it handled simple commands effectively but struggled with more nuanced or complex instructions, particularly in dynamic environments, reflecting the limitations of lightweight models in balancing efficiency and accuracy.
 
@@ -256,6 +255,12 @@ When the system is started:
 | **Execution Time**     | 167 seconds (on average)    | 101 seconds (on average)   |
 | **Error Handling**     | Requires manual restart after stalling; stops after 5 seconds with feedback | Occasional missteps, manageable errors |
 | **Setup Time**         | Long due to narrow paths and parameter tuning | Moderate with some alignment issues |
+
+- **Demo Videos**
+
+[View Moderate Task](https://drive.google.com/file/d/187_wwduw4F3oMuG4-Zo3_RRE9TUSabKS/view?usp=sharing)
+
+[View Difficult Task](https://drive.google.com/file/d/1gABv_Bmu1dy6BTIZN8vckHvBPVepR6lS/view?usp=sharing)
 
   - **Testing Methodology**:
      - Each difficulty level was tested **10 times** to ensure consistency and reliability of the results.   
