@@ -35,9 +35,19 @@ If successful, this project will:
 - Provide a scalable solution for diverse domains, including industrial and emergency applications.
 
 ### Challenges
-- Localizing of ROS 2 and the SDKs we used on the Raspberry Pi 5.
-- Real-time performance with limited computational resources on the Raspberry Pi 5.
-- Integration of navigation, object detection, and voice command nodes.
+
+- **Localization of ROS 2 and SDKs on Raspberry Pi 5**  
+Setting up ROS 2 and integrating SDKs such as **go2_ros2_sdk** and **m-explore** on the Raspberry Pi 5 was challenging due to compatibility issues and ARM-based architecture limitations. Resolving dependency conflicts and ensuring a stable environment consumed significant time during the early phase of the project.  
+Solution: We invested additional effort in debugging, manual configuration, and consulting from other resources to create a stable development environment.
+
+- **Real-Time Performance with Limited Computational Resources**  
+Running computationally intensive tasks, such as YOLO-based object detection, Vosk voice recognition, and navigation simultaneously, strained the limited processing capabilities of the Raspberry Pi 5, which led to latency issues and performance bottlenecks.  
+Solution: We optimized performance by deploying quantized YOLO models, running Vosk in lightweight offline mode, and prioritizing critical tasks and reduce response times to under 3 second.
+
+- **Integration of Navigation, Object Detection, and Voice Command Nodes**  
+Ensuring stable communication between the navigation (m-explore), object detection (YOLO), and voice command (Vosk) nodes over ROS 2 topics required careful synchronization. Miscommunication and delays initially caused inconsistent behavior, such as redundant searches or delayed responses.  
+Solution: We systematically mapped ROS 2 topics and optimized message priorities, followed by extensive integration testing to synchronize the nodes. This iterative process ensured smooth data flow and reliable task execution.
+
 
 ### Requirements for Success
 - **Skills:** Python & C++ programming, ROS 2, and machine learning expertise.
