@@ -251,7 +251,7 @@ When the system is started:
 
 | **Metric**            | **Difficult Tasks**         | **Moderate Tasks**        |
 |------------------------|-----------------------------|---------------------------|
-| **Task Success Rate**  | 50% (5 successes out of 10 tests)                       | 60% (6 successes out of 10 tests)                   |
+| **Task Success Rate**  | 50% (5 successes out of 10 tests)                       | 80% (8 successes out of 10 tests)                   |
 | **Execution Time**     | 167 seconds (on average)    | 101 seconds (on average)   |
 | **Error Handling**     | Requires manual restart after stalling; stops after 5 seconds with feedback | Occasional missteps, manageable errors |
 | **Setup Time**         | Long due to narrow paths and parameter tuning | Moderate with some alignment issues |
